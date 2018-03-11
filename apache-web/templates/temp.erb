@@ -1,0 +1,11 @@
+DocumentRoot <%= File.join(node['approot'], node['repository_name']) %>
+
+<Directory "<%= File.join(node['approot'], node['repository_name']) %>" >
+
+    Options Indexes FollowSymLinks
+
+    AllowOverride None
+
+    Order allow,deny
+    Allow from all
+</Directory>
